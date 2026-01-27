@@ -52,7 +52,7 @@ async function main() {
     console.log("\n--------------------------------");
     console.log(`Tour ${round}/${maxRounds} | Joueur actif: ${activePlayer}`);
 
-    // Phase 1 (pratique terminal): les autres voient la carte, actif détourne le regard
+    // les autres voient la carte, joueur actif détourne le regard
     console.log("\nLes autres joueurs: regardez la carte à l'écran.");
     console.log(`${activePlayer}: détourne-toi / ferme les yeux.`);
     await ask("Appuie sur Entrée pour afficher la carte...");
@@ -92,7 +92,7 @@ async function main() {
           continue;
         }
 
-        // Version simple: interdit d'écrire exactement le mot mystère
+        // interdit d'écrire exactement le mot mystère
         if (clue.toLowerCase() === mysteryWord.toLowerCase()) {
           console.log("=> Indice non valide: tu ne peux pas écrire le mot mystère.");
           continue;
@@ -128,9 +128,6 @@ async function main() {
 } else {
   console.log("Tour perdu.");
 }
-
-
-
     // joueur actif suivant
     activeIndex = (activeIndex + 1) % players.length;
   }
