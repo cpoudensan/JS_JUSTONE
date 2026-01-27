@@ -1,0 +1,15 @@
+module.exports = [
+  ["Pomme", "Voiture", "Hiver", "Chien", "Cinéma"],
+  ["Océan", "Fromage", "Lune", "Banque", "Tigre"],
+  ["Boulanger", "École", "Soleil", "Forêt", "Chocolat"],
+  ["Montagne", "Téléphone", "Pizza", "Robot", "Plage"],
+  ["Musique", "Hôpital", "Orage", "Bateau", "Banane"],
+  ["Paris", "Baguette", "Train", "Magie", "Avion"],
+  ["Jardin", "Caméra", "Neige", "Guitare", "Dragon"],
+  ["Football", "Miel", "Désert", "Pirat", "Horloge"],
+  ["Croissant", "Famille", "Fleur", "Vampire", "Énergie"],
+  ["Cartable", "Rivière", "Château", "Nuage", "Boussole"],
+  ["Clavier", "Fenêtre", "Ski", "Tomate", "Dinosaure"],
+  ["Étoile", "Café", "Sable", "Police", "Crocodile"],
+  ["Cadeau", "Forgeron", "Balle", "Médecin", "Voyage"],
+];

@@ -1,3 +1,4 @@
+const cards = require("./words");
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -10,10 +11,33 @@ function ask(question) {
 }
 
 async function main() {
-  console.log("Just One - mode texte (Node.js)");
-  const name = await ask("Ton nom ? ");
-  console.log("Salut", name);
+  const players = ["J1", "J2", "J3", "J4", "J5"];
+  let activeIndex = 0;
+
+  console.log("Just One");
+  console.log("Joueurs:", players.join(", "));
+
+  const maxRounds = Math.min(13, cards.length);
+
+  for (let round = 1; round <= maxRounds; round++) {
+    const activePlayer = players[activeIndex];
+    const cardWords = cards[round - 1];
+    console.log("Carte:", cardWords.map((w, i) => `${i + 1}:${w}`).join(" | "));
+
+    console.log("\n--------------------------------");
+    console.log(`Tour ${round}/${maxRounds} | Joueur actif: ${activePlayer}`);
+
+    await ask("Appuie sur Entrée pour passer au tour suivant...");
+
+    // joueur actif suivant (à gauche)
+    activeIndex = (activeIndex + 1) % players.length;
+  }
+
+  console.log("\nFin du test (le jeu démarre et se termine)");
   rl.close();
 }
 
-main();
+main().catch((err) => {
+  console.error("Erreur:", err);
+  rl.close();
+});
