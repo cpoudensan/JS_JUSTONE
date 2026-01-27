@@ -40,7 +40,7 @@ async function main() {
 };
   let activeIndex = Math.floor(Math.random() * players.length);
 
-  const maxRounds = (13, cards.length);
+  const maxRounds = Math.min(13, cards.length);
 
   console.log("=== Just One (mode texte) ===");
   console.log(`Joueur actif initial (au hasard): ${players[activeIndex]}`);
